@@ -2,6 +2,7 @@
 
 img.card {
   width: 200px;
+  height: 150px;
   margin: 0.5rem;
   cursor: pointer;
 }
