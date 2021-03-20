@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+img.card {
+  width: 200px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.img-bar {
+  background-image: url('img/canoe.png');
+  background-repeat: repeat-x;
+  background-size: auto 20px;
+  height: 2rem;
+}
