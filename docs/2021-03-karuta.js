@@ -49,8 +49,8 @@ const karutaImage = [
   "2021-03-karuta/れ-福川家(絵は采値ちゃん).jpg",
   "2021-03-karuta/ろ-上田家(絵は道郎くん).jpg",
   "2021-03-karuta/わ-上田家(絵は道郎くん).jpg",
-  "2021-03-karuta/を-詠み人知らず.jpg",
-  "2021-03-karuta/ん-詠み人知らず.jpg"
+  "2021-03-karuta/wo.jpg",
+  "2021-03-karuta/nn.jpg"
 ];
 const pb = app.photoBrowser.create({ photos:['2021-03-karuta/八年間.jpg'].concat(karutaImage).concat(['img/canoe.png']) });
 const openPhotoBrowser = (idx) => pb.open(idx);
