@@ -3,6 +3,7 @@ const app = new Framework7({
 });
 const mainView = app.views.create('.main-view');
 
+const resourceId = '202103a';
 window.onload = () => {
   // 画像ギャラリー
   if (images) {
