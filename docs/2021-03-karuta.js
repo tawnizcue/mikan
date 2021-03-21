@@ -1,10 +1,5 @@
-const app = new Framework7({
-  el: '#app',
-});
-const mainView = app.views.create('.main-view');
-
 const imgIdentifier = '202103';
-const karutaCard = [
+const images = [
   { url: "2021-03-karuta/あ-飯塚母.jpg?" + imgIdentifier, caption: "あ-飯塚母" },
   { url: "2021-03-karuta/い-飯塚父.jpg?" + imgIdentifier, caption: "い-飯塚父" },
   { url: "2021-03-karuta/う-五十嵐家.jpg?" + imgIdentifier, caption: "う-五十嵐家" },
@@ -54,28 +49,6 @@ const karutaCard = [
 ];
 
 const pb = app.photoBrowser.create({ photos:
-  [{ url: '2021-03-karuta/八年間.jpg?' + imgIdentifier, caption: '八年間' }].concat(karutaCard).concat([{ url: 'img/canoe.png?' + imgIdentifier, caption: 'カヌー' }])
+  [{ url: '2021-03-karuta/八年間.jpg?' + imgIdentifier, caption: '八年間' }].concat(images).concat([{ url: 'img/canoe.png?' + imgIdentifier, caption: 'カヌー' }])
 });
-const openPhotoBrowser = (idx) => pb.open(idx);
-
-window.onload = () => {
-  // 画像ギャラリー
-  const fr = document.createDocumentFragment();
-  karutaCard.forEach((karuta, idx) => {
-    const img = document.createElement('img');
-    img.src = karuta.url;
-    img.alt = karuta.caption;
-    img.addEventListener('click', () => openPhotoBrowser(idx + 1));
-    img.classList.add('card');
-
-    const cap = document.createElement('figcaption');
-    cap.classList.add('text-align-center');
-    cap.innerText = karuta.caption;
-
-    const fig = document.createElement('figure');
-    fig.appendChild(img);
-    fig.appendChild(cap);
-    fr.appendChild(fig);
-  });
-  document.querySelector('#ls-karuta').appendChild(fr);
-};
+const openPhotoBrowser = (idx) => pb.open(idx + 1);
